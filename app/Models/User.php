@@ -10,11 +10,21 @@ use Laravel\Sanctum\HasApiTokens;
 
 use Spatie\Permission\Traits\HasRoles;
 
+use App\Models\Todo;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     protected $guard_name = 'web';
+
+    /**
+     * Get all todos of the patient
+     */
+    public function todos()
+    {
+        return $this->hasMany(Todo::class, 'user_id');
+    }
 
     /**
      * The attributes that are mass assignable.

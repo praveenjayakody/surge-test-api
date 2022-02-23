@@ -13,4 +13,5 @@
     > `php artisan db:seed`
     > `php artisan db:seed RolesAndPermissionsSeeder`
     > `php artisan db:seed UserAccessSeeder`
+    > `php artisan db:seed TodoSeeder`
 6. Serve using `php artisan serve`

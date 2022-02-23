@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\PatientController;
+use App\Http\Controllers\TodoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -32,5 +32,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return response(["user" => $request->user()], 200);
     });
 
-    Route::apiResource('patients', PatientController::class);
+    Route::apiResource('todos', TodoController::class);
 });
