@@ -21,5 +21,16 @@ class TodoSeeder extends Seeder
             "content" => "First todo created in the app!",
             "status" => "todo"
         ]);
+        Todo::create([
+            "user_id" => 3,
+            "content" => "Just another normal todo",
+            "status" => "done"
+        ]);
+
+        Todo::create([
+            "user_id" => 4,
+            "content" => "Ben created this todo",
+            "status" => "progress"
+        ]);
     }
 }
